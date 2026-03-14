@@ -1,0 +1,27 @@
+
+> mindscope-frontend@0.1.0 dev
+> next dev --hostname 127.0.0.1 --port 3001
+
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\joshu\OneDrive\Desktop\Hackathon\Hackathon Rev1\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\joshu\OneDrive\Desktop\Hackathon\Hackathon Rev1\mindscope\frontend\package-lock.json
+
+   ▲ Next.js 15.5.12
+   - Local:        http://127.0.0.1:3001
+   - Network:      http://127.0.0.1:3001
+
+ ✓ Starting...
+ ✓ Ready in 1390ms
+ ○ Compiling / ...
+ ✓ Compiled / in 3.7s (606 modules)
+ GET / 200 in 4117ms
+ GET / 200 in 130ms
+ ✓ Compiled /setup in 384ms (594 modules)
+ GET /setup 200 in 513ms
+ ✓ Compiled /history in 255ms (596 modules)
+ GET /history 200 in 335ms
+Terminate batch job (Y/N)? 
+[?25h

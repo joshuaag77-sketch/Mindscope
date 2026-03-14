@@ -1,0 +1,151 @@
+
+> mindscope-frontend@0.1.0 dev
+> next dev --hostname 127.0.0.1 --port 3000
+
+   ▲ Next.js 15.5.12
+   - Local:        http://127.0.0.1:3000
+   - Network:      http://127.0.0.1:3000
+
+ ✓ Starting...
+ ✓ Ready in 1425ms
+ ○ Compiling /api/analytics/dashboard ...
+ ✓ Compiled /api/analytics/dashboard in 762ms (297 modules)
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 500 in 2183ms
+ GET /api/analytics/dashboard?limit=2 500 in 2158ms
+ ✓ Compiled in 228ms (102 modules)
+ GET /api/analytics/dashboard?limit=2 502 in 885ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 502 in 921ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 502 in 35ms
+ GET /api/analytics/dashboard?limit=2 404 in 1034ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1030ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 988ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 962ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 985ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1028ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 911ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 945ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1039ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 893ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 918ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 911ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 894ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1109ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 977ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 925ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1025ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1375ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 623ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 993ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 572ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 2005ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1005ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1756ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1043ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1019ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1035ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 959ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 927ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 904ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 922ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1089ms
+ ○ Compiling / ...
+ ✓ Compiled / in 881ms (631 modules)
+ GET / 200 in 1224ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 957ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 866ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 853ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 951ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 910ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1005ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1375ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 962ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1491ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1072ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1126ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1137ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 959ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 910ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 958ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1008ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 976ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 964ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1037ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1014ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1448ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1451ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1014ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 891ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 990ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 959ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1010ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1052ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1120ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1142ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 931ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1004ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1800ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1328ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 939ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1228ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1181ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1185ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 954ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 942ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1067ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1086ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 996ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 943ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1040ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1074ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 927ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1145ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1042ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1091ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 944ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1147ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1045ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 965ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1488ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 971ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 970ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1045ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1154ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1170ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1004ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1028ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1085ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1165ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 960ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1251ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1023ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1443ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 924ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 962ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1001ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 913ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1168ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1184ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 921ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 945ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1183ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1234ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1137ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1141ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1171ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1197ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1110ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1077ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1154ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1184ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1053ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1027ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1128ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1177ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1033ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 993ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 857ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 861ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1034ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 981ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1156ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1155ms

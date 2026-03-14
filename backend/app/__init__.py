@@ -1,0 +1,1 @@
+"""MindScope backend application package."""
