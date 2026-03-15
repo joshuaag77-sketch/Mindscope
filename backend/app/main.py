@@ -13,6 +13,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.config import get_settings
 from app.routes.analytics import router as analytics_router
 from app.routes.alerts import router as alerts_router
+from app.routes.baseline import router as baseline_router
 from app.routes.health import router as health_router
 from app.routes.scoring import router as scoring_router
 from app.services.activity_feature_extractor import ActivityFeatureExtractor
@@ -82,11 +83,27 @@ async def lifespan(app: FastAPI):
         live_service = app.state.live_ingestion_service
 
         async def _ingestion_loop() -> None:
+            _last_err: str = ""
+            _err_count: int = 0
             while True:
                 try:
                     live_service.run_once()
+                    if _err_count:
+                        logger.info("Live ingestion recovered after %d failures.", _err_count)
+                        _last_err = ""
+                        _err_count = 0
                 except Exception as exc:  # noqa: BLE001
-                    logger.warning("Live ingestion pass failed: %s", exc)
+                    msg = f"{type(exc).__name__}: {exc}"
+                    if msg != _last_err:
+                        logger.warning("Live ingestion pass failed: %s", msg, exc_info=True)
+                        _last_err = msg
+                        _err_count = 1
+                    else:
+                        _err_count += 1
+                        if _err_count % 60 == 0:
+                            logger.warning(
+                                "Live ingestion still failing (%d times): %s", _err_count, msg
+                            )
                 await asyncio.sleep(max(settings.ingestion_poll_interval_seconds, 5))
 
         ingestion_task = asyncio.create_task(_ingestion_loop())
@@ -115,6 +132,7 @@ app.add_middleware(
 )
 
 app.include_router(health_router)
+app.include_router(baseline_router)
 app.include_router(scoring_router)
 app.include_router(alerts_router)
 app.include_router(analytics_router)

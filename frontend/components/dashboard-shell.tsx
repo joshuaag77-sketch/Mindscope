@@ -9,13 +9,34 @@ import { TopNav } from "@/components/top-nav";
 import { TrendPlaceholder } from "@/components/trend-placeholder";
 import { DashboardData } from "@/lib/mock-data";
 
+function AlertBanner({ alert }: { alert: DashboardData["alertStatus"] }) {
+  if (!alert.alertActive) return null;
+  return (
+    <div className="alert-banner" role="alert">
+      <span className="alert-banner-icon">⚠️</span>
+      <div>
+        <strong>Overload alert triggered</strong>
+        <span className="alert-banner-rule">
+          {" "} Rule: {alert.triggeredRule ?? "unknown"} &mdash;{" "}
+          {alert.consecutiveCriticalWindows > 0
+            ? alert.consecutiveCriticalWindows + " critical windows"
+            : alert.consecutiveHighWindows + " high windows"}{" "}
+          in a row
+        </span>
+      </div>
+      <span className="alert-banner-email">📧 Email sent</span>
+    </div>
+  );
+}
+
 export function DashboardShell({ data }: { data: DashboardData }) {
   return (
     <main className="page-shell">
       <TopNav />
+      <AlertBanner alert={data.alertStatus} />
       <section className="hero">
         <div className="panel hero-copy">
-          <span className="eyebrow">Rules-based overload risk</span>
+          <span className="eyebrow">Live · updates every 5s</span>
           <h1
             className="hero-title"
             style={{ fontFamily: "var(--font-heading)" }}
@@ -23,9 +44,9 @@ export function DashboardShell({ data }: { data: DashboardData }) {
             Passive desktop signals, translated into an explainable risk view.
           </h1>
           <p className="hero-body">
-            MindScope compares each 10-minute activity window against a
+            MindScope compares each 10-second activity window against your
             personalized baseline, scores overload-direction deviations, and
-            keeps alerting tied to persistence instead of one noisy spike.
+            sends an alert only when overload persists — not just spikes once.
           </p>
           <div className="kpi-strip">
             <div className="kpi-item">
@@ -37,7 +58,7 @@ export function DashboardShell({ data }: { data: DashboardData }) {
               <p className="muted">{data.userId}</p>
             </div>
             <div className="kpi-item">
-              <strong>Data source</strong>
+              <strong>Source</strong>
               <p className="muted">{data.source}</p>
             </div>
           </div>
@@ -49,8 +70,7 @@ export function DashboardShell({ data }: { data: DashboardData }) {
         <div className="panel span-8">
           <h2 className="panel-title">Subsystem signals</h2>
           <p className="muted">
-            Three subscores show where overload risk is coming from in the
-            current window.
+            Three subscores show where overload risk is coming from in the current window.
           </p>
           <div className="subscore-list">
             <SubscoreCard
@@ -76,10 +96,10 @@ export function DashboardShell({ data }: { data: DashboardData }) {
           <p className="muted">State labels make the score easy to scan.</p>
           <StateBandBadge band={data.stateBand} />
           <ul className="status-list">
-            <li>Normal: 0-39</li>
-            <li>Elevated: 40-59</li>
-            <li>High: 60-74</li>
-            <li>Sustained Overload Risk: 75-100</li>
+            <li>Normal: 0–39</li>
+            <li>Elevated: 40–59</li>
+            <li>High: 60–74</li>
+            <li>Sustained Overload Risk: 75–100</li>
           </ul>
         </div>
 
@@ -115,7 +135,7 @@ export function DashboardShell({ data }: { data: DashboardData }) {
               <p className="muted">{Math.round(data.summary.avgScore)}</p>
             </div>
             <div className="kpi-item">
-              <strong>High risk windows</strong>
+              <strong>High-risk windows</strong>
               <p className="muted">{data.summary.highRiskWindows}</p>
             </div>
           </div>

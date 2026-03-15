@@ -149,3 +149,221 @@
  GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 981ms
  GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1156ms
  GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1155ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1699ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1401ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1135ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1161ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1119ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1872ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1127ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1167ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1062ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1002ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1146ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1170ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1025ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 997ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1103ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1218ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1264ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1259ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1090ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1132ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 623ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 626ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1132ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1148ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 3275ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 2971ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1139ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1139ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1074ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1118ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1122ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1184ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1059ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1079ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 983ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1000ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1099ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1042ms
+ GET / 200 in 187ms
+ ✓ Compiled in 373ms (631 modules)
+ GET / 200 in 113ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 960ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1083ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 991ms
+ GET / 200 in 84ms
+ ✓ Compiled in 182ms (631 modules)
+ GET / 200 in 95ms
+ ✓ Compiled in 224ms (633 modules)
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1261ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1266ms
+ ✓ Compiled in 236ms (633 modules)
+ ✓ Compiled in 768ms (647 modules)
+ GET / 200 in 117ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1076ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1133ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1134ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1111ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1171ms
+ ⨯ ./app/api/baseline/route.ts
+Error:   [31mx[0m Unterminated regexp literal
+    ,-[[36;1;4mC:\Users\joshu\OneDrive\Desktop\Hackathon\Hackathon Rev1\mindscope\frontend\app\api\baseline\route.ts[0m:20:1]
+ [2m17[0m | function pf(v: string) { return parseFloat(v.replace(/"/g, "").trim()) || 0; }
+ [2m18[0m | 
+ [2m19[0m | function parseCsv(text: string) {
+ [2m20[0m |   const lines = text.replace(/^﻿/, "").split(/?
+    : [35;1m                                            ^[0m
+ [2m21[0m | /).filter(Boolean);
+ [2m22[0m |   const headers = lines[0].split(",").map(h => h.replace(/"/g, "").trim());
+ [2m22[0m |   return lines.slice(1).map(line => {
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/api/baseline/route.ts
+ ○ Compiling /_not-found ...
+ ⨯ ./app/api/baseline/route.ts
+Error:   [31mx[0m Unterminated regexp literal
+    ,-[[36;1;4mC:\Users\joshu\OneDrive\Desktop\Hackathon\Hackathon Rev1\mindscope\frontend\app\api\baseline\route.ts[0m:20:1]
+ [2m17[0m | function pf(v: string) { return parseFloat(v.replace(/"/g, "").trim()) || 0; }
+ [2m18[0m | 
+ [2m19[0m | function parseCsv(text: string) {
+ [2m20[0m |   const lines = text.replace(/^﻿/, "").split(/?
+    : [35;1m                                            ^[0m
+ [2m21[0m | /).filter(Boolean);
+ [2m22[0m |   const headers = lines[0].split(",").map(h => h.replace(/"/g, "").trim());
+ [2m22[0m |   return lines.slice(1).map(line => {
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/api/baseline/route.ts
+ ⨯ ./app/api/baseline/route.ts
+Error:   [31mx[0m Unterminated regexp literal
+    ,-[[36;1;4mC:\Users\joshu\OneDrive\Desktop\Hackathon\Hackathon Rev1\mindscope\frontend\app\api\baseline\route.ts[0m:20:1]
+ [2m17[0m | function pf(v: string) { return parseFloat(v.replace(/"/g, "").trim()) || 0; }
+ [2m18[0m | 
+ [2m19[0m | function parseCsv(text: string) {
+ [2m20[0m |   const lines = text.replace(/^﻿/, "").split(/?
+    : [35;1m                                            ^[0m
+ [2m21[0m | /).filter(Boolean);
+ [2m22[0m |   const headers = lines[0].split(",").map(h => h.replace(/"/g, "").trim());
+ [2m22[0m |   return lines.slice(1).map(line => {
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/api/baseline/route.ts
+ ⨯ ./app/api/baseline/route.ts
+Error:   [31mx[0m Unterminated regexp literal
+    ,-[[36;1;4mC:\Users\joshu\OneDrive\Desktop\Hackathon\Hackathon Rev1\mindscope\frontend\app\api\baseline\route.ts[0m:20:1]
+ [2m17[0m | function pf(v: string) { return parseFloat(v.replace(/"/g, "").trim()) || 0; }
+ [2m18[0m | 
+ [2m19[0m | function parseCsv(text: string) {
+ [2m20[0m |   const lines = text.replace(/^﻿/, "").split(/?
+    : [35;1m                                            ^[0m
+ [2m21[0m | /).filter(Boolean);
+ [2m22[0m |   const headers = lines[0].split(",").map(h => h.replace(/"/g, "").trim());
+ [2m22[0m |   return lines.slice(1).map(line => {
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/api/baseline/route.ts
+ GET /api/baseline 500 in 3825ms
+ GET / 500 in 586ms
+ GET / 500 in 17ms
+ GET / 500 in 20ms
+ GET /api/baseline 500 in 13ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 500 in 27ms
+ GET /api/baseline 500 in 21ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 500 in 30ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 500 in 26ms
+ GET /api/baseline 500 in 17ms
+ ✓ Compiled /_error in 269ms (593 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET / 200 in 343ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1089ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1031ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 925ms
+ GET /api/baseline 200 in 20ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 910ms
+ ○ Compiling /baseline ...
+ ✓ Compiled /baseline in 652ms (996 modules)
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1155ms
+ GET /baseline 200 in 941ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 892ms
+ GET / 200 in 87ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1159ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 891ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1155ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1163ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1034ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1077ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1097ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1105ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1110ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1027ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1107ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1138ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1074ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1078ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1128ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1170ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 502 in 20ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 502 in 12ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1205ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1240ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1038ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 768ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 846ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 824ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1057ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 404 in 1061ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 26ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 24ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 17ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 1105ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 1086ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 502 in 21ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 502 in 20ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 502 in 20ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 502 in 12ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 1006ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 1045ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 26ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 19ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 1075ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 1133ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 33ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 41ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 1147ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 1161ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 1153ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 1149ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 33ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 36ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 28ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 37ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 35ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 31ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 1203ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 1132ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 1198ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 36ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 33ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 37ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 43ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 957ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 984ms
+ GET /api/analytics/dashboard?user_id=joshu&limit=48 200 in 988ms

@@ -76,7 +76,7 @@ class LiveIngestionService:
             overload_score=scoring.overload_score,
         )
 
-        record = self._build_record(window=window, scoring=scoring, alert_state=alert_state.model_dump())
+        record = self._build_record(window=window, scoring=scoring, alert_state=alert_state.model_dump(mode="json"))
         history = self._load_history()
         history.append(record)
         self._save_history(history)
