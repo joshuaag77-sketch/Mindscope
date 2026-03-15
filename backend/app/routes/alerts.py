@@ -56,3 +56,20 @@ def reset_alert_state(user_id: str, request: Request) -> dict:
     alert_service._states[user_id] = _AlertState(user_id=user_id)
     alert_service._persist()
     return {"status": "reset", "user_id": user_id}
+
+
+@router.post("/fire-demo/{user_id}", response_model=AlertState)
+def fire_demo_alert(user_id: str, request: Request) -> AlertState:
+    """Reset state then immediately fire a real alert email — one-click demo trigger."""
+
+    alert_service = request.app.state.alert_service
+    from app.models.alert import AlertState as _AlertState
+
+    # Hard-reset first so the email always fires even if alert_active is already True
+    alert_service._states[user_id] = _AlertState(user_id=user_id)
+    alert_service._persist()
+
+    # Two consecutive critical-range scores guarantees the persistence rule fires
+    alert_service.evaluate_score(user_id=user_id, overload_score=87.0)
+    state = alert_service.evaluate_score(user_id=user_id, overload_score=91.0)
+    return state

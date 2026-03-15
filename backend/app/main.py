@@ -14,6 +14,7 @@ from app.config import get_settings
 from app.routes.analytics import router as analytics_router
 from app.routes.alerts import router as alerts_router
 from app.routes.baseline import router as baseline_router
+from app.routes.chat import router as chat_router
 from app.routes.health import router as health_router
 from app.routes.scoring import router as scoring_router
 from app.services.activity_feature_extractor import ActivityFeatureExtractor
@@ -136,3 +137,4 @@ app.include_router(baseline_router)
 app.include_router(scoring_router)
 app.include_router(alerts_router)
 app.include_router(analytics_router)
+app.include_router(chat_router)
