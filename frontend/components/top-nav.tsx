@@ -21,12 +21,6 @@ export function TopNav() {
         <Link className={`nav-pill${pathname === "/baseline" ? " nav-pill-active" : ""}`} href="/baseline">
           Baseline Profile
         </Link>
-        <Link className={`nav-pill${pathname === "/history" ? " nav-pill-active" : ""}`} href="/history">
-          History
-        </Link>
-        <Link className={`nav-pill${pathname === "/setup" ? " nav-pill-active" : ""}`} href="/setup">
-          Setup
-        </Link>
       </nav>
     </header>
   );
