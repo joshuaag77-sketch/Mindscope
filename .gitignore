@@ -25,3 +25,10 @@ backend/.env.demo
 # Runtime logs
 *.log
 backend_out.log
+
+# All secret configuration variants; commit only the empty example
+.env.*
+!.env.example
+**/.env.*
+!**/.env.example
+.venv/

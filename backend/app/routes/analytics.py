@@ -14,11 +14,12 @@ def ingest_run_once(
 ) -> dict:
     """Trigger one live ingestion pass immediately."""
 
+    user_id = user_id or request.app.state.settings.default_user_id
     live_service = request.app.state.live_ingestion_service
     try:
         record = live_service.run_once(user_id=user_id)
     except Exception as exc:  # noqa: BLE001
-        raise HTTPException(status_code=503, detail=f"Live ingestion failed: {exc}") from exc
+        raise HTTPException(status_code=503, detail="Live ingestion failed") from exc
     if record is None:
         return {"status": "no_new_window"}
     return {"status": "ok", "record": record}
@@ -33,6 +34,7 @@ def analytics_dashboard(
 ) -> dict:
     """Return current + history + summary analytics for dashboard rendering."""
 
+    user_id = user_id or request.app.state.settings.default_user_id
     live_service = request.app.state.live_ingestion_service
     if ingest_if_needed:
         try:

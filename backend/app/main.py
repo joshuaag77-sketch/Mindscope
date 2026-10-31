@@ -11,6 +11,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import get_settings
+from app.security import SecurityMiddleware
 from app.routes.analytics import router as analytics_router
 from app.routes.alerts import router as alerts_router
 from app.routes.baseline import router as baseline_router
@@ -123,6 +124,7 @@ app = FastAPI(
     ),
     version="0.1.0",
     lifespan=lifespan,
+    docs_url=None, redoc_url=None, openapi_url=None,
 )
 
 app.add_middleware(
@@ -131,6 +133,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.add_middleware(SecurityMiddleware)
 
 app.include_router(health_router)
 app.include_router(baseline_router)

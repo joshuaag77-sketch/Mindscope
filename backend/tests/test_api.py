@@ -11,7 +11,7 @@ from app.models.activity import ActivityWindowInput
 
 
 def test_health_endpoint_returns_loaded_counts() -> None:
-    with TestClient(app) as client:
+    with TestClient(app, headers={"Authorization": "Bearer test-token-" + "x" * 40}) as client:
         response = client.get("/health")
         assert response.status_code == 200
         payload = response.json()
@@ -21,7 +21,7 @@ def test_health_endpoint_returns_loaded_counts() -> None:
 
 
 def test_scoring_and_alert_flow() -> None:
-    with TestClient(app) as client:
+    with TestClient(app, headers={"Authorization": "Bearer test-token-" + "x" * 40}) as client:
         body = ActivityWindowInput(
             user_id="test-user",
             timestamp_start=datetime(2026, 3, 10, 9, 0, tzinfo=timezone.utc),
@@ -45,7 +45,7 @@ def test_scoring_and_alert_flow() -> None:
 
 
 def test_synthetic_demo_endpoint() -> None:
-    with TestClient(app) as client:
+    with TestClient(app, headers={"Authorization": "Bearer test-token-" + "x" * 40}) as client:
         response = client.get("/api/v1/scoring/synthetic-demo?limit=5")
         assert response.status_code == 200
         payload = response.json()

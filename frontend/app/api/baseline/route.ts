@@ -1,4 +1,5 @@
-import { NextResponse } from "next/server";
+import { authorize } from "@/lib/security";
+import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 
@@ -32,11 +33,13 @@ function avg(arr: number[]) {
   return arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length : 0;
 }
 
-export async function GET() {
+export async function GET(request: NextRequest) {
+  const denied = await authorize(request);
+  if (denied) return denied;
   try {
     const csvPath = path.resolve(process.cwd(), "..", "backend", "data", "baseline_profile.csv");
     if (!fs.existsSync(csvPath)) {
-      return NextResponse.json({ error: "baseline_profile.csv not found at " + csvPath, row_count: 0, metrics: [], hourly: [] });
+      return NextResponse.json({ error: "Baseline data unavailable", row_count: 0, metrics: [], hourly: [] });
     }
     const rows = parseCsv(fs.readFileSync(csvPath, "utf-8"));
     const meanTotals: Record<string, number[]> = {};
@@ -71,6 +74,6 @@ export async function GET() {
 
     return NextResponse.json({ row_count: rows.length, metrics, hourly });
   } catch (error) {
-    return NextResponse.json({ error: String(error), row_count: 0, metrics: [], hourly: [] }, { status: 500 });
+    return NextResponse.json({ error: "Baseline data unavailable", row_count: 0, metrics: [], hourly: [] }, { status: 500 });
   }
 }

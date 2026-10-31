@@ -8,7 +8,7 @@ import os
 from datetime import datetime, timedelta
 
 from fastapi import APIRouter
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/v1/chat", tags=["chat"])
@@ -104,13 +104,13 @@ Return ONLY valid JSON:
 
 
 class PrioritizeRequest(BaseModel):
-    tasks: str
-    user_id: str = "joshu"
+    tasks: str = Field(min_length=1, max_length=8000)
+    user_id: str | None = None
 
 
 class ScheduleRequest(BaseModel):
-    tasks: list[dict]
-    start_time: str = "09:00"
+    tasks: list[dict] = Field(max_length=20)
+    start_time: str = Field(default="09:00", pattern=r"^([01][0-9]|2[0-3]):[0-5][0-9]$")
 
 
 def _rule_based_fallback(tasks_text: str) -> dict:

@@ -17,7 +17,7 @@ function generateICS(blocks: Schedule["blocks"]): string {
   const ds = `${y}${mo}${d}`;
   let ics = "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//MindScope//TaskCopilot//EN\r\nCALSCALE:GREGORIAN\r\n";
   for (const b of blocks) {
-    if (b.block_type !== "task" && b.block_type !== "schedule") continue;
+    if (b.block_type !== "task") continue;
     if (b.task === "Buffer" || b.task === "Break") continue;
     const [sh, sm] = b.start.split(":").map(Number);
     const [eh, em] = b.end.split(":").map(Number);
@@ -73,7 +73,7 @@ export function DayPlanner({ schedule, onReset }: { schedule: Schedule; onReset?
 
       <div className="dp-timeline">
         {schedule.blocks.map((block, i) => {
-          if (block.block_type === "buffer" || block.block_type === "break") {
+          if (block.block_type === "buffer") {
             return (
               <div key={i} className="dp-buffer-row">
                 <span className="dp-buf-time">{block.start}</span>

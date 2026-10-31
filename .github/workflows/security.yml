@@ -1,0 +1,19 @@
+name: Security checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - run: python3 scripts/check_secrets.py
+      - run: python3 -m pip install -r backend/requirements.txt
+      - run: python3 -m pytest
+        working-directory: backend
+      - run: npm ci --ignore-scripts
+        working-directory: frontend
+      - run: npm audit --omit=dev
+        working-directory: frontend
+      - run: npm run build
+        working-directory: frontend

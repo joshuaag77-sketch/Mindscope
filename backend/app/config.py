@@ -90,7 +90,7 @@ def get_settings() -> Settings:
             "MINDSCOPE_AW_AFK_BUCKET_PREFIX",
             "aw-watcher-afk_",
         ),
-        ingestion_enabled=_env_bool("MINDSCOPE_INGESTION_ENABLED", True),
+        ingestion_enabled=_env_bool("MINDSCOPE_INGESTION_ENABLED", False),
         ingestion_poll_interval_seconds=int(
             os.getenv("MINDSCOPE_INGESTION_POLL_SECONDS", "10")
         ),

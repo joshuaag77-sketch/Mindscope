@@ -46,6 +46,7 @@ def synthetic_demo(
 ) -> dict[str, object]:
     """Return a scored synthetic trend for frontend dashboard bootstrapping."""
 
+    user_id = user_id or request.app.state.settings.default_user_id
     scoring_service = request.app.state.scoring_service
     scored = scoring_service.score_synthetic_windows(limit=limit, user_id=user_id)
     if not scored:
@@ -80,6 +81,7 @@ def synthetic_current(
 
     scoring_service = request.app.state.scoring_service
     alert_service = request.app.state.alert_service
+    user_id = user_id or request.app.state.settings.default_user_id
     windows = scoring_service.synthetic_windows
     if user_id:
         windows = [window for window in windows if window.user_id == user_id]
